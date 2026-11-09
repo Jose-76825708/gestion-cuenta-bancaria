@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-slate-800;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Scrollbar discreta estilo app bancaria */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-300;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer components {
+  /* Chip de cuenta tipo banca móvil */
+  .cuenta-chip {
+    @apply rounded-full px-4 py-2 text-xs font-semibold transition-all duration-200;
+  }
+}
